@@ -5,9 +5,9 @@ mkdir luaSmaple
 cd luaSmaple
 
 # luaソース一式をダウンロード
-curl -R -O http://www.lua.org/ftp/lua-5.3.0.tar.gz
+curl -R -O http://www.lua.org/ftp/lua-5.3.2.tar.gz
 # tar.gzの解凍
-tar zxf lua-5.3.0.tar.gz
+tar zxf lua-5.3.2.tar.gz
 
 # MakeFileの作成
 cat << 'EOF' > Makefile
@@ -16,7 +16,7 @@ LUASRCS = lapi.c lauxlib.c lbaselib.c lbitlib.c lcode.c lcorolib.c      \
           linit.c liolib.c llex.c lmathlib.c lmem.c loadlib.c           \
           lobject.c lopcodes.c loslib.c lparser.c lstate.c lstring.c    \
           lstrlib.c ltable.c ltablib.c ltm.c lundump.c lvm.c lzio.c lutf8lib.c
-LUADIR = lua-5.3.0
+LUADIR = lua-5.3.2
 LUAOBJS = $(patsubst %.c,$(LUADIR)/src/%.o,$(LUASRCS))
 OBJS = $(LUAOBJS) for_lua.o
 
